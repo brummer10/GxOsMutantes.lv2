@@ -17,9 +17,9 @@
 		else ifneq ($(shell cat /proc/cpuinfo | grep ARM ) , )
 		ifneq ($(shell cat /proc/cpuinfo | grep ARMv7 ) , )
 			ifneq ($(shell cat /proc/cpuinfo | grep vfpd32 ) , )
-				SSE_CFLAGS = -march=armv7 -mfpu=vfpv3 
+				SSE_CFLAGS = -march=armv7-a -mfpu=vfpv3 
 			else ifneq ($(shell cat /proc/cpuinfo | grep vfpv3 ) , )
-				SSE_CFLAGS = -march=armv7 -mfpu=vfpv3
+				SSE_CFLAGS = -march=armv7-a -mfpu=vfpv3
 			endif
 		else
 			ARMCPU = "YES"
